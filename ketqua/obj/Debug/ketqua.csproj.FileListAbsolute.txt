@@ -1,0 +1,10 @@
+D:\project\02-form\ketqua\ketqua\obj\Debug\ketqua.csprojResolveAssemblyReference.cache
+D:\project\02-form\ketqua\ketqua\obj\Debug\ketqua.Form1.resources
+D:\project\02-form\ketqua\ketqua\obj\Debug\ketqua.Properties.Resources.resources
+D:\project\02-form\ketqua\ketqua\obj\Debug\ketqua.csproj.GenerateResource.Cache
+D:\project\02-form\ketqua\ketqua\obj\Debug\ketqua.csproj.CoreCompileInputs.cache
+D:\project\02-form\ketqua\ketqua\bin\Debug\ketqua.exe.config
+D:\project\02-form\ketqua\ketqua\bin\Debug\ketqua.exe
+D:\project\02-form\ketqua\ketqua\bin\Debug\ketqua.pdb
+D:\project\02-form\ketqua\ketqua\obj\Debug\ketqua.exe
+D:\project\02-form\ketqua\ketqua\obj\Debug\ketqua.pdb
