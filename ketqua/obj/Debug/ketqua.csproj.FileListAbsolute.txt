@@ -8,13 +8,3 @@ D:\project\02-form\ketqua\ketqua\bin\Debug\ketqua.exe
 D:\project\02-form\ketqua\ketqua\bin\Debug\ketqua.pdb
 D:\project\02-form\ketqua\ketqua\obj\Debug\ketqua.exe
 D:\project\02-form\ketqua\ketqua\obj\Debug\ketqua.pdb
-E:\02-WorkPlace\01-VS\ketqua\ketqua\bin\Debug\ketqua.exe.config
-E:\02-WorkPlace\01-VS\ketqua\ketqua\bin\Debug\ketqua.exe
-E:\02-WorkPlace\01-VS\ketqua\ketqua\bin\Debug\ketqua.pdb
-E:\02-WorkPlace\01-VS\ketqua\ketqua\obj\Debug\ketqua.csprojAssemblyReference.cache
-E:\02-WorkPlace\01-VS\ketqua\ketqua\obj\Debug\ketqua.Form1.resources
-E:\02-WorkPlace\01-VS\ketqua\ketqua\obj\Debug\ketqua.Properties.Resources.resources
-E:\02-WorkPlace\01-VS\ketqua\ketqua\obj\Debug\ketqua.csproj.GenerateResource.cache
-E:\02-WorkPlace\01-VS\ketqua\ketqua\obj\Debug\ketqua.csproj.CoreCompileInputs.cache
-E:\02-WorkPlace\01-VS\ketqua\ketqua\obj\Debug\ketqua.exe
-E:\02-WorkPlace\01-VS\ketqua\ketqua\obj\Debug\ketqua.pdb
