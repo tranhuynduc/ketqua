@@ -14,7 +14,7 @@ namespace ketqua
     public partial class Form1 : Form
     {
 
-        private string folderPath = @"E:\02-WorkPlace\01-VS\database\";
+        private string folderPath = @"D:\project\02-form\database\";
         public Form1()
         {
             InitializeComponent();
