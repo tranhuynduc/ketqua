@@ -14,7 +14,7 @@ namespace ketqua
     public partial class Form1 : Form
     {
 
-        private string folderPath = @"D:\project\02-form\database\";
+        private string folderPath = @"E:\02-WorkPlace\01-VS\database\";
         public Form1()
         {
             InitializeComponent();
@@ -162,7 +162,8 @@ namespace ketqua
             //string[] tempDataArray = new string[] { };
             //string[,] tempDataArray = makeTable(dataArray, lineLength);
 
-            int[,] tempDataArray = makeTableInt(dataLength, numColumns);
+            //int[,] tempDataArray = makeTableInt(dataLength, numColumns);
+            int[] tempDataArray = new int[dataLength];
 
             for (int i = 0; i < lineLength; i++)
             {
@@ -174,31 +175,22 @@ namespace ketqua
                 string lineVal = "";
                 for (int ii = 0; ii < dataLength; ii++)
                 {
-                    bool isReset = ((lineLength + 1) % numColumns) == 0;
                     lineVal = dataArray[ii];
-                    if (lineVal == "01_11_17_19")
-                    {
-                        Console.WriteLine("debug");
-                    }
 
                     if (count < resultLength && lineVal == result[count])
                     {
-                        tempDataArray[ii, currentColumn] = 0;
+                        tempDataArray[ii] = 0;
                         count++;
                     }
                     else
                     {
-                        tempDataArray[ii, currentColumn] = tempDataArray[ii, currentColumn - 1] + 1;
+                        tempDataArray[ii] = tempDataArray[ii] + 1;
                     }
 
-                    if (isReset)
-                    {
-                        tempDataArray[ii, 0] = tempDataArray[ii, numColumns];
-                    }
                 }
             }
 
-            WriteData(tempDataArray, false);
+            WriteDataSingle(tempDataArray);
         }
 
         private void calculateFourNumberSeperate()
@@ -207,10 +199,7 @@ namespace ketqua
             int lineLength = lines.Length;
             string[] dataArray = generateFourNumber();
             int dataLength = dataArray.Length;
-            for (int numFile = 0; numFile < 5; numFile++)
-            {
 
-            }
             //string[] tempDataArray = new string[] { };
             //string[,] tempDataArray = makeTable(dataArray, lineLength);
 
@@ -269,6 +258,42 @@ namespace ketqua
             }
 
             return tempArray;
+        }
+
+        private string[] convertDataSingle(int[] data)
+        {
+            Console.WriteLine("Conver Data");
+            string[] dataArray = generateFourNumber();
+            int length = countFourNumber();
+            string[] tempArray = new string[length];
+
+            for (int i = 0; i < length; i++)
+            {
+
+                tempArray[i] = dataArray[i] + '\t' + data[i];
+            }
+
+            return tempArray;
+        }
+
+
+        private void WriteDataSingle(int[] dataArray = null)
+        {
+            Console.WriteLine("Write Data");
+            string strPath = folderPath + @"result\result-single-4.txt";
+            string[] arrayData = convertDataSingle(dataArray);
+
+            int length = arrayData.Length;
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(strPath))
+            {
+                for (int i = 0; i < length; i++)
+                {
+                    file.WriteLine(arrayData[i]);
+                }
+            }
+            Console.WriteLine("start:" + start);
+            Console.WriteLine("end: " + DateTime.Now.ToString("h:mm:ss tt"));
+            System.Console.WriteLine("============Complete =============== ");
         }
         private void WriteData(int[,] table = null, bool isThree = true)
         {
@@ -418,6 +443,8 @@ namespace ketqua
             int count = 0;
             for (int i = 0; i < 100; i++)
             {
+                Console.WriteLine("index: " + i);
+
                 for (int j = i + 1; j < 100; j++)
                 {
                     for (int k = j + 1; k < 100; k++)
@@ -475,7 +502,8 @@ namespace ketqua
 
         private string[] Read_File()
         {
-            string path = @"D:\project\02-form\database\data.txt";
+            string path = @"E:\02-WorkPlace\01-VS\ketqua\ketqua\data.txt";
+            Console.WriteLine("Contents start write  = ");
             string[] lines = System.IO.File.ReadAllLines(path);
             System.Console.WriteLine("Contents of WriteLines2.txt = ");
             return lines;
