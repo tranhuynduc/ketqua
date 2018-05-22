@@ -502,7 +502,7 @@ namespace ketqua
 
         private string[] Read_File()
         {
-            string path = @"E:\02-WorkPlace\01-VS\ketqua\ketqua\data.txt";
+            string path = @"D:\project\02-form\database\data.txt";
             Console.WriteLine("Contents start write  = ");
             string[] lines = System.IO.File.ReadAllLines(path);
             System.Console.WriteLine("Contents of WriteLines2.txt = ");
