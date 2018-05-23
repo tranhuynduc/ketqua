@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Digits\Digit.cs" />
+    <Compile Include="Digits\FourDigits.cs" />
+    <Compile Include="Digits\ThreeDigits.cs" />
     <Compile Include="Digits\Utils.cs" />
     <Compile Include="Digits\Variables.cs" />
     <Compile Include="Form1.cs">

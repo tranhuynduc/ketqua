@@ -8,13 +8,19 @@ namespace ketqua.Digits
 {
     public abstract class Digit
     {
+        public enum Digits
+        {
+            TWO_DIGITS,
+            THREE_DIGITS,
+            FOURS_DIGITS,
+        }
         protected int amountOfNumber;
         protected string filePath = Variables.DATABASE_FOLDER_PATH + "data.txt";
-        Variables.Digits digitType;
+        public Digits digitType;
         abstract public string[] GenerateNumber();
         abstract public string[] MixNumber(string[] strArray, bool isSkip = true);
 
-        private void WriteData(int[] data, Variables.Digits digitType)
+        private void WriteData(int[] data, Digits digitType)
         {
             Console.WriteLine("Conver Data Single....");
             string[] dataArray = GenerateNumber();
@@ -29,7 +35,7 @@ namespace ketqua.Digits
             Utils.WriteDataToFile(tempArray, filePath);
         }
 
-        private void WriteData(int[,] table, Variables.Digits digitsType)
+        private void WriteData(int[,] table, Digits digitsType)
         {
             Console.WriteLine("Conver Table To Data Array.....: ");
             string[] dataArray = GenerateNumber();

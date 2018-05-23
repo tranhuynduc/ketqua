@@ -12,6 +12,7 @@ namespace ketqua.Digits
         {
             this.amountOfNumber = Variables.AMOUNT_OF_THREE_DEGITS;
             this.filePath = Variables.DATABASE_FOLDER_PATH + "data-three-digits.txt";
+            this.digitType = Digits.THREE_DIGITS;
         }
 
         public override string[] GenerateNumber()

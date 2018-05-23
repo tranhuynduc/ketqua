@@ -11,7 +11,8 @@ namespace ketqua.Digits
         public FourDigits ()
         {
             this.amountOfNumber = Variables.AMOUNT_OF_FOUR_DEGITS;
-            this.filePath = Variables.DATABASE_FOLDER_PATH + "data-four-digits.txt";
+            this.filePath = Variables.DATABASE_FOLDER_PATH + "data-four-digits  .txt";
+            this.digitType = Digits.FOURS_DIGITS;
         }
         public override string[] GenerateNumber()
         {

@@ -13,7 +13,9 @@ namespace ketqua.Digits
         {
             this.amountOfNumber = Variables.AMOUNT_OF_TWO_DEGITS;
             this.filePath = Variables.DATABASE_FOLDER_PATH + "data-two-digits.txt";
-    }
+            this.digitType = Digits.TWO_DIGITS;
+        }
+
         public override string[] GenerateNumber()
         {
             int numRows = Variables.AMOUNT_OF_TWO_DEGITS;
