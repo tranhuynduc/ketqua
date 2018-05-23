@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ketqua.Digits;
 namespace ketqua
 {
     public partial class Form1 : Form
@@ -270,6 +270,7 @@ namespace ketqua
 
             return tempArray;
         }
+
         private void WriteData(int[,] table = null, bool isThree = true)
         {
             Console.WriteLine("Write Data");
@@ -287,7 +288,7 @@ namespace ketqua
             Console.WriteLine("end: " + DateTime.Now.ToString("h:mm:ss tt"));
             System.Console.WriteLine("============Complete =============== ");
         }
-
+        //
         private string[] mixThreeNumber(string[] strArray, bool isSkip = true)
         {
             int start = isSkip ? 1 : 0;
@@ -318,7 +319,7 @@ namespace ketqua
             }
             return tempArray;
         }
-
+        //
         private string[] mixFourNumber(string[] strArray, bool isSkip = true)
         {
             int start = isSkip ? 1 : 0;
@@ -432,6 +433,7 @@ namespace ketqua
             }
             return strArray;
         }
+        //
         private void generateNumberThree()
         {
 
@@ -460,6 +462,8 @@ namespace ketqua
             Console.WriteLine("=============start===============");
             start = DateTime.Now.ToString("h:mm:ss tt");
             Console.WriteLine(start);
+            Console.WriteLine(Variables.CURRENT_DIRECTORY);
+            
 
         }
 
@@ -473,6 +477,8 @@ namespace ketqua
             calculateFourNumber();
         }
 
+
+        //
         private string[] Read_File()
         {
             string path = @"D:\project\02-form\database\data.txt";
@@ -481,12 +487,14 @@ namespace ketqua
             return lines;
         }
 
+        //
         private string[] reduceArray(string[] arrayString)
         {
             arrayString = arrayString.Distinct().ToArray();
             return arrayString;
         }
 
+        
         private void button1_Click(object sender, EventArgs e)
         {
             string[] arrayString = { "01", "10", "11", "14", "19", "23", "26", "32", "34", "40", "45", "46", "54", "55", "61", "64", "66", "67", "73", "78", "82", "82", "84", "84", "87", "88", "90" };
@@ -540,12 +548,5 @@ namespace ketqua
             //}
 
         }
-
-        private string[] uniq_fast()
-        {
-            return null;
-        }
-
-
     }
 }
