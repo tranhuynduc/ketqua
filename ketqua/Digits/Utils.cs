@@ -15,9 +15,20 @@ namespace ketqua.Digits
             return DateTime.Now.ToString("h:mm:ss tt");
             
         }
-        // Read/Write File
-        public static string[] ReadFile(string path = Variables.DIRECTORY_PATH)
+
+        public static string[] SubArray(string[] data, int index, int length)
         {
+            string[] result = new string[length];
+            Array.Copy(data, index, result, 0, length);
+            return result;
+        }
+        // Read/Write File
+        public static string[] ReadFile(string path = null)
+        {
+            if (path == null)
+            {
+                path = Variables.DATABASE_FILE;
+            }
             Console.WriteLine("Read File: " + path);
             string[] lines = System.IO.File.ReadAllLines(path);
             Console.WriteLine("Read File End.");
@@ -26,7 +37,7 @@ namespace ketqua.Digits
 
         public static void WriteDataToFile(string[] strArray, string path = Variables.DATABASE_FOLDER_PATH)
         {
-            Directory.CreateDirectory(Variables.DATABASE_FOLDER_NAME);
+            Directory.CreateDirectory(Variables.RESULT_FOLDER_NAME);
             int length = strArray.Length;
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(path))
             {
@@ -38,6 +49,8 @@ namespace ketqua.Digits
             Console.WriteLine("start: " + Variables.START_TIME);
             Console.WriteLine("end: " + DateTime.Now.ToString("h:mm:ss tt"));
             Console.WriteLine("============ Complete Write Data Single =============== ");
+            Console.WriteLine("File Path: " + path);
+            
         }
 
         public static void WriteFile(string[] arrayData, string path)

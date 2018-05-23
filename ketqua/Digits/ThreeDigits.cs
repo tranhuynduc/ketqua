@@ -11,8 +11,9 @@ namespace ketqua.Digits
         public ThreeDigits()
         {
             this.amountOfNumber = Variables.AMOUNT_OF_THREE_DEGITS;
-            this.filePath = Variables.DATABASE_FOLDER_PATH + "data-three-digits.txt";
+            this.filePath = filePath + "data-three-digits.txt";
             this.digitType = Digits.THREE_DIGITS;
+            this.limitDataLine = 1000;
         }
 
         public override string[] GenerateNumber()
@@ -40,8 +41,19 @@ namespace ketqua.Digits
             int start = isSkip ? 1 : 0;
             int arrayLength = strArray.Length;
             int count = 0;
-            string[] tempArray = new string[Variables.AMOUNT_OF_THREE_DEGITS];
+            for (int i = start; i < arrayLength; i++)
+            {
+                for (int j = i + 1; j < arrayLength; j++)
+                {
+                    for (int k = j + 1; k < arrayLength; k++)
+                    {
+                        count++;
+                    }
+                }
+            }
 
+            string[] tempArray = new string[count];
+            count = 0;
             for (int i = start; i < arrayLength; i++)
             {
                 for (int j = i + 1; j < arrayLength; j++)
