@@ -18,6 +18,7 @@ namespace ketqua.Digits
         protected string filePath;
         protected string dataPath;
         protected int limitDataLine = 0;
+        protected int numberPerMessage = 1;
 
         public Digit()
         {
@@ -307,5 +308,43 @@ namespace ketqua.Digits
         {
             return "";
         }
+
+        public void GenerateMessage()
+        {
+            string path = Variables.DATABASE_DIRECTORY + "message-number-" + (int)digitType + ".txt";
+            string pathResult = Variables.RESULT_DIRECTORY + "result-message-number-" + (int)digitType + ".txt";
+            string[] lines = Utils.ReadFile(path);
+            int length = lines.Length;
+            string[] messages = new string[(length / numberPerMessage) + 2];
+            string message = "";
+            string baseMesssage = message += "Lô xiên " + (int)digitType;
+            string endMessage = "x2.";
+            int count = -1;
+            int numLine = (length / numberPerMessage + 1);
+            message += "Lô xiên " + (int)digitType;
+
+            string tempString = "";
+            for (int i = 0; i < lines.Length; i++)
+            {
+                int rows = i % (numberPerMessage + 1);
+                if (rows == 0)
+                {
+                    count++;
+                    messages[count] = baseMesssage;
+                }
+                var s = lines[i];
+                messages[count] += "." + GetMessage(s);
+
+                if (rows == 23)
+                {
+                    messages[count] += endMessage;
+                }
+            }
+
+            messages[count] += endMessage;
+            Utils.WriteDataToFile(messages, pathResult);
+        }
+
+        abstract public string GetMessage(string str);
     }
 }

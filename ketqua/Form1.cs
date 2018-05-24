@@ -94,5 +94,20 @@ namespace ketqua
         {
             fourDigits.CalculateSingle();
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            twoDigits.GenerateMessage();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            threeDigits.GenerateMessage();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            fourDigits.GenerateMessage();
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace ketqua.Digits
             this.filePath = filePath + "data-three-digits.txt";
             this.digitType = Digits.THREE_DIGITS;
             this.limitDataLine = 1000;
+            this.numberPerMessage = 14;
         }
 
         public override string[] GenerateNumber()
@@ -66,6 +67,11 @@ namespace ketqua.Digits
                 }
             }
             return tempArray;
+        }
+
+        public override string GetMessage(string s)
+        {
+            return s.Substring(0, 2) + " " + s.Substring(3, 2) + " " + s.Substring(6, 2);
         }
     }
 }

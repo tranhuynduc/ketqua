@@ -15,6 +15,7 @@ namespace ketqua.Digits
             this.filePath = filePath + "data-two-digits.txt";
             this.digitType = Digits.TWO_DIGITS;
             this.limitDataLine = 200;
+            this.numberPerMessage = 23;
         }
 
         public override string[] GenerateNumber()
@@ -59,6 +60,10 @@ namespace ketqua.Digits
             }
             return tempArray;
         }
-
+         
+        public override string GetMessage(string s)
+        {
+            return s.Substring(0, 2) + " " + s.Substring(3, 2);
+        }
     }
 }

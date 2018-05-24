@@ -35,7 +35,22 @@ namespace ketqua.Digits
             return lines;
         }
 
-        public static void WriteDataToFile(string[] strArray, string path = Variables.DATABASE_FOLDER_PATH)
+
+        public static void WriteDataToFile(string str, string path = Variables.DATABASE_FOLDER_PATH)
+        {
+            Directory.CreateDirectory(Variables.RESULT_FOLDER_NAME);
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(path))
+            {
+
+                file.WriteLine(str);
+            }
+            Console.WriteLine("start: " + Variables.START_TIME);
+            Console.WriteLine("end: " + DateTime.Now.ToString("h:mm:ss tt"));
+            Console.WriteLine("============ Complete Write Data Single =============== ");
+            Console.WriteLine("File Path: " + path);
+        }
+
+         public static void WriteDataToFile(string[] strArray, string path = Variables.DATABASE_FOLDER_PATH)
         {
             Directory.CreateDirectory(Variables.RESULT_FOLDER_NAME);
             int length = strArray.Length;

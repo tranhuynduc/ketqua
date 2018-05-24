@@ -13,7 +13,7 @@ namespace ketqua.Digits
             this.amountOfNumber = Variables.AMOUNT_OF_FOUR_DEGITS;
             this.filePath = filePath + "data-four-digits.txt";
             this.digitType = Digits.FOURS_DIGITS;
-            
+            this.numberPerMessage = 10;
         }
         public override string[] GenerateNumber()
         {
@@ -73,6 +73,11 @@ namespace ketqua.Digits
                 }
             }
             return tempArray;
+        }
+
+        public override string GetMessage(string s)
+        {
+            return s.Substring(0, 2) + " " + s.Substring(3, 2) + " " + s.Substring(6, 2) + " " + s.Substring(9, 2);
         }
     }
 }

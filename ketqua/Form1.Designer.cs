@@ -44,6 +44,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -227,11 +231,59 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 191);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Tạo tin nhắn";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(395, 188);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 19;
+            this.button12.Text = "4 Xiên";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(277, 188);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 18;
+            this.button13.Text = "3 Xiên";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(159, 188);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.TabIndex = 17;
+            this.button14.Text = "2 Xiên";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 401);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button14);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label5);
@@ -274,6 +326,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
     }
 }
 
