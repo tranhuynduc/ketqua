@@ -326,7 +326,7 @@ namespace ketqua.Digits
             string tempString = "";
             for (int i = 0; i < lines.Length; i++)
             {
-                int rows = i % (numberPerMessage + 1);
+                int rows = i % (numberPerMessage);
                 if (rows == 0)
                 {
                     count++;
@@ -335,7 +335,7 @@ namespace ketqua.Digits
                 var s = lines[i];
                 messages[count] += "." + GetMessage(s);
 
-                if (rows == 23)
+                if (rows == numberPerMessage - 1)
                 {
                     messages[count] += endMessage;
                 }
