@@ -1,0 +1,9 @@
+D:\project\03-Digits\ketqua\bin\Release\ketqua.exe.config
+D:\project\03-Digits\ketqua\bin\Release\ketqua.exe
+D:\project\03-Digits\ketqua\bin\Release\ketqua.pdb
+D:\project\03-Digits\ketqua\obj\Release\ketqua.Form1.resources
+D:\project\03-Digits\ketqua\obj\Release\ketqua.Properties.Resources.resources
+D:\project\03-Digits\ketqua\obj\Release\ketqua.csproj.GenerateResource.Cache
+D:\project\03-Digits\ketqua\obj\Release\ketqua.csproj.CoreCompileInputs.cache
+D:\project\03-Digits\ketqua\obj\Release\ketqua.exe
+D:\project\03-Digits\ketqua\obj\Release\ketqua.pdb
